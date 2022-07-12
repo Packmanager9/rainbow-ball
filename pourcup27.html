@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css"> 
+     <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'G-5P52B8ZSEF');
+      </script>
+</head>
+
+<div class="gamepage-wrapper">
+
+    <!-- Basic header. Should hold simple branding and navigation. -->
+    <header class="gamepage-header">
+        <!-- Image provided by Eucalyp Studio in Artificial Intelligence from https://www.iconfinder.com/iconsets/artificial-intelligence-6 -->
+        <!-- <img id="site-logo" src="assets/iconfinder_ArtificialIntelligence29_2890576_blackwhite.png"> -->
+        <ul class="nav-content">
+            <!-- <li class="nav-list-item"><a class="nav-link-text" href="">Home</a></li> -->
+            <li class="nav-list-item"><a class="nav-link-text" href="http://ditzbitz.com/games.html">Games</a></li>
+            <!-- <li class="nav-list-item"><a class="nav-link-text" href="https://www.linkedin.com/in/cole-ditzler-41b160133/" target="_blank">About</a></li> -->
+        </ul>
+    </header>
+
+    <!-- Container for page content. Contains and aligns instructions, game, and ads. -->
+    <div class="game-content-container">
+
+        <!-- Left side banner. Should contain instuctions for the game. -->
+        <aside class="gamepage-left-aside">
+            <h2>Pourcup</h2>
+            <ul>
+                <li> WASD to move the cup.</li>
+                <li> Q/E  to change cup size.</li>
+                <li> Press Y to reset the ball, but not the sliders.</li>
+                <button id = 'reset'>Reset Cup</button>
+                <button id = 'pause'>Pause</button>
+                <div class="slidecontainer">
+                <li> Grip</li>
+                <input type="range" step=".04" min="0" max="3" value="1.5" class="slider" id="cohesive">
+                <li> Length</li>
+                <input type="range" step=".5" min="1" max="100" value="30" class="slider" id="length">
+                <li> Gravity</li>
+                <input type="range" step=".1" min="-2" max="2" value="1.5" class="slider" id="gravity">
+                <li> Mode</li>
+                <input type="range" step="2" min="-1" max="1" value="-1" class="slider" id="mode">
+                <li> Color Rate</li>
+                <input type="range" step="1" min="1" max="2000" value="900" class="slider" id="colorrate">
+                <li> Droplets</li>
+                <input type="range" step="1" min="0" max="1500" value="300" class="slider" id="drops">
+                <li> Drop Size</li>
+                <input type="range" step=".1" min=".1" max="5" value="1" class="slider" id="size">
+                <li> Animation</li>
+                <input type="range" step=".05" min=".1" max="2" value="1" class="slider" id="speedtrap">
+                <li> Link Cap</li>
+                <input type="range" step="1" min="0" max="10" value="6" class="slider" id="linklength">
+                </div>
+            </ul>
+        </aside>
+
+        <!-- Game container. Holds the game for this page scaled to fit.  -->
+
+        <div class="game-container">
+
+            <div id="dog-image-container">
+
+                <canvas id="canvas" width="800" height="800"></canvas>
+
+                <script src="pourcup27.js"></script>
+            </div id="go">
+        </div>
+
+        <!-- Right side banner. No content for now. Perhaps ad-space in the future. -->
+        <aside class="gamepage-right-aside">
+            <!-- Add content here later. -->
+        </aside>
+    </div>
+
+    <!-- Simple footer. Just a copyright notice. -->
+    <footer class="games-footer">
+    </footer>
+
+</div>
+
+</html>
